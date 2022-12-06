@@ -15,7 +15,6 @@ foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\D
 
 Console.WriteLine(totalPoints);
 Console.WriteLine(secondTotalPoints);
-Console.ReadLine();
 
 int CalculateRoundPoint(string opponentChoice, string myChoice)
 {

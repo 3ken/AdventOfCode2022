@@ -18,4 +18,3 @@ var topCalorieCount = calorieCountPerBackpack.Max();
 Console.WriteLine("Top calorie count " + topCalorieCount);
 var topThreeCaloriesCountSum = calorieCountPerBackpack.OrderByDescending(x => x).Take(3).Sum();
 Console.WriteLine("Top three calorie count sum: " + topThreeCaloriesCountSum);
-Console.ReadLine();
