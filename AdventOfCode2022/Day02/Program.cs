@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-var myChoices = new Dictionary<string, int> { { "X", 1 }, { "Y", 2 }, { "Z", 3 } };
+﻿var myChoices = new Dictionary<string, int> { { "X", 1 }, { "Y", 2 }, { "Z", 3 } };
 var totalPoints = 0;
 var secondTotalPoints = 0;
 foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\Day02\Data.txt"))
