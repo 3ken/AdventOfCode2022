@@ -1,15 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-var myChoices = new Dictionary<string, int>
+var myChoices = new Dictionary<string, int> { { "X", 1 }, { "Y", 2 }, { "Z", 3 } };
+var totalPoints = 0;
+foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\Day02\Data.txt"))
 {
-    { "X", 1 },
-    { "Y", 2 },
-    { "Z", 3 }
-};
+    if (!string.IsNullOrEmpty(line))
+    {
+        var arguments = line.Split(" ");
+        totalPoints += CalculateRoundPoint(arguments[0], arguments[1]);
+    }
+}
 
-var opponentChoices = new List<string> { "A", "B", "C" };
-
-var rountPoint = CalculateRoundPoint("", "");
+Console.WriteLine(totalPoints);
+Console.ReadLine();
 
 int CalculateRoundPoint(string opponentChoice, string myChoice)
 {

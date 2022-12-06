@@ -1,7 +1,7 @@
 ﻿var calorieCountPerBackpack = new List<int>();
 
 var currentCalories = 0;
-foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\Day01\Data.txt"))
+foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\Day01\Data.txt"))
 {
     if (string.IsNullOrEmpty(line))
     {
