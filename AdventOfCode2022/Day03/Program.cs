@@ -71,7 +71,7 @@ foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\D
     }
 }
 
-for (var i = 0; i < lines.Count; i = i + 3)
+for (var i = 0; i < lines.Count; i += 3)
 {
     var badge = lines[i].Intersect(lines[i + 1]).Intersect(lines[i + 2]).First();
     badgesSum += valueDict[badge];
