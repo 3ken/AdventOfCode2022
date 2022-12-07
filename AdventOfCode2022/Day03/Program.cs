@@ -55,9 +55,12 @@
 };
 
 var sum = 0;
+var lines = new List<string>();
+var badgesSum = 0;
 
 foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\Day03\Data.txt"))
 {
+    lines.Add(line);
     if (!string.IsNullOrEmpty(line))
     {
         var itemsInEachComp = line.Length / 2;
@@ -68,5 +71,12 @@ foreach (var line in File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\D
     }
 }
 
+for (var i = 0; i < lines.Count; i = i + 3)
+{
+    var badge = lines[i].Intersect(lines[i + 1]).Intersect(lines[i + 2]).First();
+    badgesSum += valueDict[badge];
+}
+
 Console.WriteLine(sum);
+Console.WriteLine(badgesSum);
 
