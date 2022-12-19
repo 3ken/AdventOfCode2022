@@ -1,3 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-Console.WriteLine("Hello, World!");
+﻿var file = File.ReadLines(@"C:\Git\AdventOfCode2022\AdventOfCode2022\Day07\Data.txt").ToList();
