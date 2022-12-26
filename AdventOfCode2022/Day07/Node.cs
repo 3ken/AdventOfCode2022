@@ -9,6 +9,13 @@ public class Node
 
     public int GetTotalSize()
     {
+        if(!Branches.Any())
+            return 0;
         return Branches.Sum(b => b.Size);
+    }
+
+    public Node Copy()
+    {
+        return new Node { Name = this.Name, Size = this.Size, Parent = this.Parent, Branches = this.Branches };
     }
 }
