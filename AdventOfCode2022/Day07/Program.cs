@@ -68,7 +68,7 @@ int GetSizeOfDirectoryToDelete(Node node, int filesystemSize)
     return CalculateWhatDirectoryToDelete(directorySizes, filesystemSize);
 }
 
-void GetAllBranchDirectorySizes(Node node, List<int> directorySizes)
+void GetAllBranchDirectorySizes(Node node, ICollection<int> directorySizes)
 {
     foreach (var branch in node.Branches.Where(branch => branch.Type == "dir"))
     {
@@ -81,8 +81,8 @@ int CalculateWhatDirectoryToDelete(List<int> directorySizes, int filesystemSize)
 {
     var bestSizeToDelete = 0;
     var bestSizeYet = int.MaxValue;
-    var spaceNeeded = 30000000;
-    var totalFileSystem = 70000000;
+    const int spaceNeeded = 30000000;
+    const int totalFileSystem = 70000000;
     foreach (var directorySize in directorySizes)
     {
         var fileSystemSizeAfterDeletion = totalFileSystem - filesystemSize + directorySize;
